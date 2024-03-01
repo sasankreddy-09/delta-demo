@@ -1,0 +1,614 @@
+camelCase-->used in js,java,c++;
+snake_case-->python;
+PascalCase-->These are three different cases in writing a variable name;
+$ _ letter alphabets are used in variable name no spaces are given;
+NAN is a number which is the not legal number in JS;
+type script is a static typed one and javascript is dynamically typed;
+that means the type script datatype variable cannot be changed it is like strict version of 
+javascipt. it is developed by microsoft;
+javascript is a 0 based index language;
+varibale.length --> gives the length of the string;
+length is a property because it associated the variablename;
+typeof name.length --> is a number ;
+ctrl+l used to clear the console;
+NULL and undefined datatypes;
+They look same but they are somehow different;
+Undefined 
+A variable that has not been assigned a value  is of type undefined. or if we want acess the ilegal value;
+the null value represents the intentional absence of any object value;
+Nslookup.io
+If we want to write or print any message or log(print in technical terms) in on console 
+template iterals are the used to reduce the concation or to merge different variables and strings;
+The template iterals are written in the between `` --> (back tick) if there is any variable or something 
+it is written in the way "${}" firs the value in the $ is evaluated and then added to the string and then 
+print;like this it reduce the code;
+-->Ex:- a=1 b=2 --> console.log("The value of a+b is ", a+b ," cm")=== console.log('the value of a+b is ${a+b} cm') it is
+extensively used;
+console.log();
+console.warn();
+console.error();
+In js strings are immutable there are some methods like trim ;
+it is used string variable name with method name. when we use any method a new string is created;
+str=str.toUpperCase();
+str=str.tolowerCase();
+Arguments is some value that we pass to the method;
+string.method(arg);
+indexOf is a method which takes the argument as a letter or string 
+which you want to find the first index of occurence in the str variable;
+ex:- string.indexOf("j")--->not found returns -1;
+str="javascript";
+str.indexOf("java")-->returns 0;
+str.indexOf("Java")-->returns -1;
+method chaining example--> str="  javascript  ";
+method chaining ==> str=str.trim() and str=str.toUpperCase()== str=str.trim().toUpperCase();
+if we want to use multiple method we use method chaining it reads the from left to right that means
+first trim then uppercase;
+slice is method that returns the string over the given valid range of indices of a string;
+str.slice(2,4)-->prints the string until 2,3 index values here the 4 is not included;
+str.slice(1)-->returns the string until the length of string;
+str.slice(-1)-->returns the str.length-1;
+replace and repeat method 
+replace method is used to replace the first occurence of the string 
+for example str="sss" then str.replace('s','o') ---> returns oss;
+repeat method is used to repeat the string the given number of times;
+for example str="s" then str.repeat(4)--> returns ssss
+arrays in js
+pop push unshift shift are the methods of the strings;
+pop is used to remove the last element and returns the removed element;
+push is used to add the elment to the last into arrays;
+unshift is used to add the elements at the first of the array;
+shift is used to remove the first element and returns the removed element;
+slice method is used to slice ;
+array=[1,2,3,4,5,6];
+array.slice(-2);-->returns 5,6 elments  
+splice: removes/replaces/add elments in place
+splice(start,deleteCount,item0...itemN);
+reverse is a method it changes the base array  it doesnot returns the copy;
+if we pass the starting index it works like slice but it removes the spliced ones;
+//replacing of the elements;
+array2.splice(1,1,"sasank");
+console.log(`array after splice function ${array2}`);
+sort is a method used to sort the array in this sorting the numbers are converted into the strings and then
+sorted;
+so there is disturbance in sorting of a number in array;
+let us say array=[1],array2=[1]
+array==array2-->false;
+array===array2-->false;
+because array2 varaible stores the memory location it doesnot stores the elements ;
+for example array = array2 --> if we change any thing in one of the array it will also changes in the another array;
+in javascript we can make the array as a constant if we make the constant the we can make the changes in the elements
+but we cannot change the whole array because the array stores the adress so we cannot change the array;
+ex--> const array=[1,3];
+array.pop();-->legal;
+array.push(2)-->legal;
+array=[1,3]-->ilegal;
+for of loop is same as for loop in python that means let us take an array arr=[1,2,3] then 
+for( elements in arr){
+    document.write(elements);-->prints all the elements in the array;
+}
+---------------------
+js object iterals:
+---------------------
+used to store the keyed collections and complex entities;
+property=>(key,value)pair;
+object are a collection of properties;
+example: let x={
+    name:"javascript",
+    age:12,
+    use:"nothing",
+    y:[1,2,3,4],
+}
+array is also possible to include inside the object iterals;
+actually all the username and posts and likes etc are stored in object iterals in instagram etc;
+we can access the values through keys in object iterals using x.name and x["name"] if we use x[name] it thinks variable name;
+javascript converts the automatically the keys into strings;
+let y={
+    1:2,
+    3:4,
+};
+delete is the keyword used to delete any key value pair delete x.age; we can change the data type of the 
+existing value of the key;
+javascript has Math object  it has Math.PI and Math.E
+it has beautiful method Math.abs(),Math.pow(a,b)-->a**b,Math.floor(a)-->it round off it returns the low value 
+or equal value Math.ceil(n) Math.random()-->returns 0 to 1 but 1 is exculded
+Math.floor(Math.random()*10)+1;
+
+
+
+****  block scope *****;
+block means when we write anything in curly braces "{}" it is called block if any variable is declared it used only in that area
+when we use var keyword we can use the variable outside the block but it is not a good choice;
+because the block scope is introduced in 2015 year let and const also introduced in 2015 so it is applicable to let and const -->block;
+
+
+*** lexical scope ***;
+if a variable is defined in outer function that vairable is able to acessed by the any no of inner functions
+but converse is not true;
+** hoisting **;
+function hel(){
+    function hi(){
+        conosle.log(x);-->not an error
+    }
+    let x=2;
+}
+if we call hi()--> it prints an error so it is like an variable inside a function we cannot able to access the 
+inner function directly without outer function;
+function Expressions **
+const sum = function(a,b){
+    return a+b;
+}
+sum(a,b)-->it is function Expressions it doesnot have any name it is another way of writing of function
+
+
+** higher order function **;
+higher order functions are the functions that does one or both: which takes the input as one or more functions or 
+it returns the functions 
+example:=
+function multipleGreet(func,count){
+    for(let i=0;i<=count;i++){
+        func();
+    }
+}
+multipleGreet(function(){console.log("Namaste")},10);  -->correct 
+function hi(){
+    console.log("Namaste")}
+mulitpleGreet(hi,2);-->correct
+mulitpleGreet(hi(),2);-->wrong because the it calls the function before the execution ;
+
+
+** functions which are defined inside a object then it is called methods **
+strings and arrays are also objects 
+we can use directly without function keyword it is shorthand procedure 
+for example:= 
+obj={
+    sum(a,b){
+        return a+b;-->directly it takes it as a function no need of function keyword
+    },
+    dif(a,c){
+        return a-c;
+    },
+    // we can be done like this also;
+    sum:function(a,b){
+        return a+b;--> it is not a shorthand method
+    }
+}--> it is shorthand of methods defination;
+
+This keyword refers to object that is excuting current piece of code
+obj{
+    age:12;
+    man:20;
+    getAvg(){
+        let avg=(this.age+this.man)-->this means obj;
+    }
+}
+function get(){
+    console.log(this)-->prints window object
+}
+almost every code unders the window object . it creates the window object
+when there is nothing object there exists window object;
+try and catch --> same as try and expect--> in python;
+try{
+    console.log(a)
+}catch(e){
+    console.log(e)-->prints error
+}
+
+
+**** miscellaneous -->  
+: consisting of many things of different sorts *******
+Arrow function
+cube=x=>{-->without parenthasis when there is only one arguments if there is no arguments or more than one parenthasis we have to place parenthasis
+    return x*x*x;
+}
+this arrow function;
+we can also omit the return the value only we have single value 
+multiple=(a,b)=>(-->parenthasis is used
+    a*b-->returns a*b--> only we have only return statement not having anyother output
+);-->statement terminator
+
+
+setTimeout-->inbuilt function--> it is used to call api 
+setTimeout(function-->callbacks the function,timeout -->take in ms 1s=1000ms); callback if when a function takes other function as a parameter
+setTimeout(
+    ()=>(console.log("Hello wolrd"));,4000
+)
+setInterval--> it is almost same as setTimeout.this function executes every set time it returns some id 
+if we want to stop we have run a function clearInterval(id);
+
+Array have different types of methods 
+foreach() is a method which is used to iterate all the elements in a array it takes callback function as a variable;
+syntax for this is arr_name.forEach(function)
+arr=[1,2,3,4,5];
+arr.forEach((el)=>(console.log(el)))-->prints all the elements
+map is a method same as forEach but it returns altered elements into a new array;
+syntax is same as forEach()
+let an=arr.map((el)=>(return el+2));
+console.log(an)-->returns new array with alterations
+
+filter is a method is returns the elements if the given condition is true it doesnot returns if it is not true
+let an = arr.filter((el)=>(el%2==0))-->returns the elements based on the condition
+
+every is a method returns true if every elements returns true callback
+[2,4].every((el)=>(e1%2=0))-->True
+[2,4,5].every((el)=>(e1%2=0))-->False
+
+some is like logical or it returns true if anyone of the value is true ;
+
+
+reduce function returns the reduced value of the total array
+which function has the logic for reduction that function is called reducer function
+arr.reduce((res,el)=>{if(res<el){
+    return res
+}else{
+    return el
+}})
+see screenshot reference on reduce function;
+
+we have default parameters in javascript we can pass default arruguments into the function
+example:
+function sum(a=2,b){
+    return a+b;
+}
+sum(1)-->returns NAN because a is taken 1 according to place value and b= undefined;
+so maximum we can give the default values at end 
+
+
+spread function is used to iterate the all the iterabul objects 
+exaple: arr=[1,2,3,4,5]; not only arrays string also used the spread function
+console.log(...arr)-->three dots indicates the spread of a array;-->prints the  1 2 3 4 5 
+Math.min(...arr)-->returns the minimum value ;
+
+we can make an array copy also with spread function;
+ex:arra=[1,2,3,4,5];
+let newarray=[...arra];
+newarray.push(6)
+console.log(arra)-->prints 1 2 3 4 5;
+console.log(newarray)-->prints 1 2 3 4 5 6 ;
+// we can also do another thing using spread;
+let odd=[1,3,5,7];
+let even=[2,4,6,8];
+let merg=[...odd,...even];
+obj={age:1,
+name:"sasank"},
+newobj={...obj,age:1}
+obj={..odd}==>returns object with keys as index numbers and values as a array elements
+
+
+Rest is opposite to spread function;
+actually there is argument (type of array) which stores the arguments given to function;
+function hello(...args-->takes all the arguments){
+    args.reduce((ref,el)=>{return el+ref})
+}
+
+destructuring an array and destructuring an object ;
+let us take a example:
+arr=["sasank","javascript","apnacollege"];
+let [name,language]=arr;-->stores only sasank,javascript according to the sequence;
+let [name,...language]= arr;-->stores sasank in name and language stores all the remaining values
+
+destructuring an object;
+let us take an example:
+obj={
+    name:"sasank",
+    age:12,
+    college:"apnacollege"
+};
+
+let (name,age)=obj;-->takes values of name age if present if not undefined is assigned;
+let (name,college:course)=obj-->takes the values of college into course variable that means it searches 
+the value of college and stores the value at course;
+let (name,college:course="Html",city="nellore")=obj-->checks for city if it is not present nellore is 
+printed else if it is found city the default value is overwrittend;
+
+*************note***************
+The forEach() method does not returns a new array based on the given array;.
+The map() method returns an entirely new array;
+The forEach() method returns “undefined“;
+The map() method returns the newly created array according to the provided callback function.
+
+while changing the html and css pages into javascript . the javascript converts them into the
+tree structure .According to the heirarchy of the tags. the nodes in the tree are objects in the js;
+document is one of the object in the javascript if we change in the document object it refelects in the
+webpage. we can see the all the properties of the document object by using the console.dir(document). 
+It has different document object properties;
+all properity in document object it has all tags used in html.Id and Class and inner text  names also stored in all object;
+using inner text we can change the h1 tag;
+
+selecting elements by  using getElementById(//take input id)  it is a documentobject "method";
+Returns the elements as an object or null(if found both);
+docuemnt.getElementById returns the object not a tag;
+
+selecting elements by using getElementByClassName(//take class name as input )
+returns the elements as a HTML collection or empty collection(if not found)
+the collection means it is similar to the array but we cannot push or pop or any array methods 
+we can access them by using the index value;
+
+
+
+selecting elements by using getElementByTagName(//take tag name as input )
+returns the elements as a HTML collection or empty collection(if not found)
+the collection means it is similar to the array but we cannot push or pop or any array methods 
+we can access them by using the index value;
+
+queryselectors are used to select the elements using the selectors as in css the syntax of the 
+queryselectors returns only the first occurence of the elements 
+for example if there are three p tags then the first p tag is returned 
+console.dir(document.queryselectors("p"));
+console.dir(document.querySelectors("#id"));
+console.dir(document.querySelectors(".class"));
+console.dir(document.querySelectors("#id:nth-type-of(2n)"));
+querySelectorsAll are same as querySelectors but the difference it returns all the occurence of the 
+selectors in a nodelist;
+
+****manuplation in dom(document object model);******
+InnerHTML-->shows  all the markup tags and text
+textContent-->shows if there is any hidden text (display:none;) and it shows the structure written in the 
+webpage;
+InnerText-->shows only the text shown in the webpage
+docuemnt.querySelectors(p).innerHTML=`<u>${document.querySelectors(p).innerText}</u>`;-->correct underlined
+docuemnt.querySelectors(p).innerText=`<u>${document.querySelectors(p).innerText}</u>`;-->prints as it is how it is ,not   underlined
+docuemnt.querySelectors(p).textContent=`<u>${document.querySelectors(p).innerText}</u>`;-->prints as it is how it is,not  underlined
+
+getting and manuplating the values of attributes in html code
+getters and setters functions----> document.getAttribute("id")-->returns the value of id  
+document.setAttribute("id","new_id")-->changes the id value into the new_id if it is present ,if it is not present it sets the
+id value into the new_id;
+the property of the css are converts into the camelCase for example there is background-color in css and in javascript it 
+will becomes the backgroundColor;
+
+we can access the style properties in javascript and also we can change the styling properties also 
+for example there is a h1 tag with inlined css style background-color:"red",
+it can be changed or if it is not assigned any we can also change by using style object
+h1=document.querySelectors("h1")
+h1.style.backgroundColor="blue"--> changes the color into blue
+the inline css style one's are seen in style object of the javascript so we use the javascript 
+very less to change the style 
+
+
+we can access the class by using the methods classList()-->Returns all the classess in the form of collection
+classList.add()-->it adds the classes into the html documents
+classList.remove()-->it removes the classes in the html documents
+classList.contains()-->it returns true if the class is present and false if the class is not present
+classList.toggle()-->toggle is like a switch if the class is present it removes the class if 
+it is not present it adds the elements;
+.setAttribute()--> it is mostly unused because it replaces all the class elements with the given name 
+of the setAttribute that means if there are three classes then if we change the name with setAttribute 
+all the three classes names are replaced with the name given in the setAttribute method.that why we uses the
+classList methods;
+
+Navigation of the elements 
+h1=document.querySelectors("h1");
+h1.parentElement-->returns the parentElement of the h1
+h1.children--->returns the childrens of the h1
+h1.childElementCount-->returns the no of the childrens in the h1
+h1.previousElementSiblings--> it access the previous sibling present before h1
+h1.nextElementSiblings--> It access the next sibling present after h1
+
+Differences from Node.appendChild() : 
+Element.append() allows you to also append string objects, whereas Node.appendChild() only accepts Node objects.
+Element.append() has no return value, whereas Node.appendChild() returns the appended Node object.
+prepend is used to add the elements at the first of the element. insertadjacent(wehre, element) 
+we can create a element  by using the document.createElement("p");
+appendChild is used to make changes in the parent; append method is used to make changes inside the element ;
+
+
+removeChild , remove are the different methods to remove the elements in javascript 
+removeChild is same like the appendChild it removes the child of a parent 
+remove method is same as append method ;
+
+there are some event handlers for button which are apply when we click them or when we hover them 
+for example :
+let btn=document.querySelectors("button")
+btn.onclick=()=>{console.log("clikced the button")};--> it will not excute if we click the button
+btn.onclick=()=>{console.log("pressed the button")};--> it will excute if we click the button  to over come this exception 
+we use the event listeners 
+btn.addEventListener(action,callbackfunction);
+btn.addEventListener('click',()=>{console.log("clikced the button")});
+btn.addEventListener('click',()=>{console.log("pressed the button")});--> the above both will be execute if we click the button 
+
+
+We can add different event listeners to different elements
+this keywords is used in eventlistener it represents to the property name to which the eventlisteners are 
+added .
+for example:
+btn=document.querySelectors("btn");
+btn.addEventListener("click",()=>{
+    console.log(this);-->prints the the button tag in the html document-->here this represents the btn object;
+})
+this keyword is most used when we want to set the same event to different elements then we use the this keyword
+for more details about this keyword see the screenshot 
+
+***keyboard events******
+There are different keyboard events like keydown keyup and other. there are events arguments default 
+which returns about the key pressed in that list the code and key properties are important .
+        inpu.addEventListener("keyup",function (events){
+            console.log(events.code);
+            console.log(events.key);
+        })
+in events arguments there is another method called preventDefault()-->which restricts the 
+default actions
+
+******There are form events******
+there are different form events like submit . the event triggers when we click on the submit button
+form.addEventListener("submit",(event)=>{
+    console.log("submited")
+    event.preventDefault()-->it restricts the action that had to happen after the submit button
+})
+input and change are some of the events that trigger the changes in a form /text area etc 
+input and change events look same but there is a slight difference  
+input triggers the each and every change of the text
+while change triggers when we submit or focus on the other elements or the when we move away from 
+the input element;
+
+There is a event bubbling in javascript there is a method named event.preventPropogation() to prevent the 
+bubbling in javascript .bubbling means when there are different parent and siblings if we add any events like 
+click or other . if we click any sibling along with sibling events and parents events also triggers
+to stop this type of behaviour event.preventPropogation() method is added in the function ;
+btn.addEventListener("click",(event)=>{event.preventPropogation()})
+
+The function variables cannot be accessed after the function because the function calls are stored in 
+stack that means first in last out and then after the function excution the function call is ended as well as 
+the variable created in a function is also ended
+
+breakpoints;
+we use breakpoints in debugging where we put a point in the chrome and watch the each and every step after the 
+breakpoint one by one we can put one or more than one breakpoint in the file ;
+Actuall there are two types of languages 1) single threaded languages 2) multi-threaded languages;
+javascript is a single threaded 
+using the settimeout function we can make excution of code without waiting for the other code;
+for example :
+setTimeout(()=>{
+    console.log("Hello wrold");-->after 2 s it will execute 
+},2000)
+console.log("My name is broswer")->it will execute first  
+that means the javascipt is not a multithreaded the browser makes all the things the browser code is 
+writtened in max c++, c++,java is a multithreaded language;
+synchrous code  means line by line code execution ;
+Asynchrous code menas not line by line code execution;
+
+example for promise 
+function datadb(data){
+    return new Promise ((resolve,restrict)=>{
+    let internetspeed=Math.floor(Math.random()*10)+1;
+    if(internetspeed>4){
+        resolve("data :is stored");
+    }
+    else{
+        restrict("your internet connection is weak");
+    }
+    })
+}
+promise is a object it has three states pending ,success and failure . pending doesnt know whether the 
+execution is sucess or failure.
+promise returns the two function resolve and reject. 
+we can make the above code more compatable by using the then and catch methods which are already present in the
+promise object;
+function datadb(_data){
+    return new Promise ((resolve,restrict)=>{
+    let internetspeed=Math.floor(Math.random()*10)+1;
+    if(internetspeed>4){
+        resolve("data :is stored");
+    }
+    else{
+        restrict("your internet connection is weak");
+    }
+    })
+}
+datadb("Nothing greater than").then(()=>{
+    console.log("It is executed");})
+    .catch(()=>{
+        console.log("It is not executed");
+    })
+it is like try and catch;
+
+
+we can do promise chaining;
+function savetodb(data){
+    return new Promise((resolve,reject)=>{
+        let internetspeed=Math.floor(Math.random()*10)+1;
+        if(internetspeed>4){
+            resolve("It is saved");//-->result 
+        }
+        else{
+            reject("It is not saved");//-->error
+        }
+    })
+}
+savetodb("Data")
+.then((result)=>{--> the result in this is resolve data;
+    console.log("It is saved");
+    console.log(result);
+    return savetodb("DAta");
+}).then(()=>{
+    console.log("It is printed")
+})
+.catch((error)=>{
+    console.log("It is not saved");
+    console.log(error);
+})
+
+There is async and await keywords async keyword before function it returns a promise, if there is any 
+error it returns error promise;
+throw is a keyword returns the error at the place it is written 
+we can use the async keyword with arrow function . async  keyword is writtened before the funciton name;
+async function returns promise and await is keyword which makes the call of the other function after the 
+return of the promise from the function ;
+
+we can handle the error of the await function using the try and catch methods ;
+async function hello(){
+    try{
+        await hi();
+        await hi();-->if error occured here or any line in the try function ;
+        await hi();
+}
+    catch(err){
+        console.log(err);
+    }
+    console.log("it is different")
+}
+
+
+
+/// API's are Application programming interface;--> it is like interface between user and server
+we can interact with two softwares using the apis ;
+but we discuss about the web api's;
+let us imagine api as a waiter we request waiter and waiter get the food;
+if we want to change anything in the webpage without refresh. we can use the api's;
+there are different types of api's. there are twitter api's and instagram api's.we can reply to anyone or see 
+mentions using the api's 
+api means the endpoint that means url --> it is little bit confusing but it is useful ;
+some api's doesnt have key and not paid. key means like password . twitter also wants to be paid after some time 
+of usage;
+
+
+json --> javascript object notation ;
+www.json.org;
+xml --> extensable markup language ;--> before json;
+xml is looks like html; json  are diffrent from javascipt objects in javascript the keys are not strings 
+but in json they are strings; undefined is valid in javascript objects;
+json data actully are written in the string format in the javascript 
+they are converted into the json data through the function JSON.parse(data); 
+the javascript objects are converted into the json data by using the JSON.stringify(data)--> it returns the json object;
+There are some testing api request tools like hoppscoth and postman;
+
+ajax means asynchrous javascipt and xml 
+The request going to api and giving data is a asynchrous process. thats why we dont want to reload the pages
+if we want to like or do anything in a webpage;
+There are html verbs like get ,post and delete get means if we want to get any information and post is used to 
+post any information into the sever and delete is used to delete the data;
+there are status code :
+200  ---  ok;--> it means everything is okay;
+404  ---  pagenotfound --> it means the page is not found;
+400  ---  bad request 
+500  ---  internal server error;
+200--299 indicates the everything is okay
+300--399 redirecting ;
+400-499 client error;
+500-599 server error;
+
+we can add aditional information to the url like /serach?key=value and if there is ::id {{id}}--> like these
+are specified id's so these are having specified values;--> these are query strings 
+
+we can also give additional information throught the html headers. headers are two types request header, response 
+headers;
+
+we can request the apis by using the javascipt through the fetch keyword the keyword returns the promise ,
+when we print the promise we cannot get the required object . becuase the request has a some headers that think 
+like the promise is success so we get the readable stream . we can get the promise into readable information 
+by using the json method it also returns the promise by using the then and catch methods we can get information;
+the above all are the async functions ; actually we parse the fetch to get the json data;
+
+
+
+axios is a library to make HTTP request. it  is a compatable method to call the fetch method inside the axios;
+we need to install the axios library but we can take cdn links from the github;axios have methods;
+axios.get()==>method is used to get request;
+axios.post()==>method is used to post request;
+we have fetch method but the axios method is used to convert the readable string to the json method directly;
+
+
+headers have the additional information can be given const config={headers:{Accept:"application/json"}} 
+let r=await axios.get(url,config);
+console.log(r.data);
+
+query string in the axios.get-->method we can give the information like axios.get(url+country);

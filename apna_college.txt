@@ -1,0 +1,196 @@
+Rgb color code represents the percentage of the red green blue with the range of 0 - 255
+hex code is same as rgb but it represents the colors with #FFFFFF actually hex code is number representation with base 16 0-9ABCDEF
+0-255 is equal to 0-FF 
+short hand of #ffffff is equal to #fff if two are identical 
+FONT WEIGHT (100-900):
+It tells the font how much weight and how much light 
+font-weight:normal --> 400
+font-weight:bold -->700
+font-weight:100 --> until 900
+font-weight:bolder--> parent relation used parent means a outer element we have 
+font-weight:lighter
+TEXT DECORATION :
+sets the appreance of decorative lines on text like underline:
+text-decoration:underline ; overline ; line-through;
+text-decoration-color:// colors the line;
+text-decoration-style:wavy;dotted;double;
+text-decoration:none;
+LINE HEIGHT:
+it controls the height of the line of text
+line-height:normal;
+line-height:2.5; -->2.5*normal
+letter-spacing:10px;px=pixles
+FONT - SIZE UNITS IN CSS:
+Absolue || Relative
+px         % 
+pt	   em	
+pc 	   rem
+cm	   ch
+mm	   vh
+in	   vw+many more
+96px==1 in 
+72pt==1 in 
+12pt==1 pc
+PX most commonly used absolute unit
+not suitable for responsive(for both phone and laptop) websites
+font-size to increase the size of the font
+FONT FAMILY
+specifies a priortized list of one or more font family names:
+font-family:arial;
+by default chrome is times new roman 
+if font style doesnt support it takes default style <a href="cssfontstack.com">#different font styles
+back drop in font-family
+Descendent Selector
+Eg:: selects all paragraphs inside divs
+<!-- div p{
+    property:value;selects all the paragraphs in div tag
+}-->
+ADJACENT SIBLING COMBINATOR 
+HEADING 3 THAT COMES IMMEDIATELY AFTER ANY paragraphs
+P+H3{
+    property:value;
+}
+"+"-->adjacent COMBINATOR
+CHILD COMBINATOR::
+selects all buttons which are directly children of spans
+ATTRIBUTE SELECTOR:
+selects the elements based on the presence or value of a given ATTRIBUTE
+input[attr="value"]{
+    property:value;
+}
+PSUEDO CLASS::
+A keyword added to a selector that specifies a special state of the selected elements
+:hover
+:active
+:checked
+:nth-of-type-->to change the n elements at a time 
+specificity
+
+
+
+PSEUDO element:::
+A keyword added to a selector that lets you style a specific part of the selected elements
+::first-letter(we can use singe colon also it works but it is not correct)
+::first-line
+::selection(it comes to use when we select a    color:darkgreen
+ny paragraph)
+
+
+
+SELECTOR specificity
+What is specificity????
+specificity is an algorithm that caluculates the weight that is applied to a given css declaration 
+id >class,attribute,psudeo-class>element and psudeo-element
+these are hundred place , tenth place, ones place it is like mathematics
+if specificity is same casscading is used 
+""""""" inline is the highest prioritized other than any thing """""""
+
+
+!important 
+when we want to give the highest priority so that cannot be 
+changed by any thing inline is also lesser than the importnat
+ "" but it is not used mostly"" 
+
+
+
+
+"" inheritence ""
+if we write div ,p and li in one after the other 
+div is the parent and p and li are childrens 
+if we apply any color to the div tag it will apply to the p and li also 
+it is called inheritence 
+input tag doesnt inherit any property 
+
+"color pallet"
+
+NOTE:width height border some others are not inherited
+
+--- important--- 
+box in css
+margin is used to give the space between the two boxes
+** margin:0,auto; here auto gives the same margin space from left and right
+border is used to give the border of the given element
+HEIGHT
+by default it sets the content area height of the element
+
+
+Inline and block elements there some important points to remember for more information refer the pdf 
+
+
+in inline elements There is no height and width in for example inline doesnt apply any 
+block property but inline-block is one of the property it can be used to apply the block property 
+and behave like inline objects
+
+PERCENTAGE***UNITS:
+IT is often used to define a size as relative to an elements parent object.
+eg:: width :33.33% // relative to the parent
+it is realtive to the parent height and width
+div has inner div
+
+Relative units:
+em ( pronounced as m )
+Font size of the parent , in case of typographical properties like font-size and font size of the elment itself
+in case of other properties like width
+text related properties is also called typographical 
+
+
+
+
+******CSS Next Steps ********
+Alpha channel 
+sets the opacity for a color 
+ranges from 0 to 1
+it tells the how much does the color appear 
+eg:-rgba(0,255,0,0.3)
+aplha=0.3 in above we can set 0.43 also in points
+hexa decmial also has alpha value 
+example #4dff00ff   00-->ff
+
+
+opacity ::
+it is used to set the opacity of the element unlike alpha 
+Ranges from 0 to 1
+
+
+
+
+** css transition **
+transition enable to you to define the transition between two states of an element
+/* transition Shorthand property name|duration|timing-function|delay*/
+
+** css Transform ***
+this poperty lets you rotate scale skew or translate an element
+
+
+** box shadow **
+it adds shadow effect around an elements frame
+
+** position**
+The position css property sets how an element is positioned in a document
+The top, right, bottom, and left  properties determine the final location of positioned element 
+* static
+* relative
+* absolute
+* fixed
+absolute
+It is posiitoned relative to its          ,,, closet positioned ancestor --> its parent or other whose position is not fixed
+if any otherwise it is placed relative to the intial containing block;
+
+
+
+
+css Animations 
+ to animate css elements
+ syntax @keyframe myname---> animation name{
+    from{font-size:20px;}
+    to{font-size:40px;}
+ }
+
+**Media quries
+  help to create a responsive website
+  media features - width(of viewport-->visible)
+  @media(min-width/max-width:400px){
+    div{
+        background-color:red;
+    }
+  }
